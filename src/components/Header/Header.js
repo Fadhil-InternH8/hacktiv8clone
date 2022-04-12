@@ -63,7 +63,7 @@ function Header() {
   return (
     <Head>
       <Menu>
-        <a href="null">
+        <a href="/">
           <img
             src="https://www.hacktiv8.com/images/logo/hacktiv8-light.webp"
             alt="hacktiv8-logo"
