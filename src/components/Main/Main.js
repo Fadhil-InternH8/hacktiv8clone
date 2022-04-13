@@ -1,6 +1,16 @@
 import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import {
+  faCalculator,
+  faLightbulb,
+  faPuzzlePiece,
+  faFileUpload,
+  faTree,
+  faLayerGroup,
+  faUserTie,
+} from "@fortawesome/free-solid-svg-icons";
 // import { Sliders } from "./Slider";
 
 const wrapper = css`
@@ -18,14 +28,6 @@ const diamondColumn = css`
   width: 100%;
   margin: 15px 0 0 0;
 `;
-
-// const firstDiamondColumn = css`
-//   justify-content: flex-end;
-//   margin: 0;
-// `;
-// const lastDiamondColumn = css`
-//   justify-content: flex-start;
-// `;
 
 const heading2 = css`
   line-height: 1.2;
@@ -50,6 +52,11 @@ const imageStyle2 = css`
   width: 100%;
   height: 100%;
   object-fit: contain;
+`;
+
+const iconStyle = css`
+  font-size: 24px;
+  color: #f16634;
 `;
 
 const heading3 = css`
@@ -96,12 +103,6 @@ const yellowButtonJoin = css`
 const blueButtonJoin = css`
   border-color: #1d3d71;
   background-color: #1d3d71;
-`;
-
-const buttonContactUs = css`
-  width: 155px;
-  background-color: #fff;
-  color: #f16634;
 `;
 
 function Main() {
@@ -322,7 +323,19 @@ function Main() {
                 align-items: flex-start;
               `}
             >
-              <div className="icon"></div>
+              <div
+                css={css`
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 55px;
+                  height: 55px;
+                  border-radius: 12px;
+                  background-color: #fff;
+                `}
+              >
+                <Icon css={iconStyle} icon={faCalculator} />
+              </div>
               <div
                 css={css`
                   width: 285px;
@@ -343,7 +356,19 @@ function Main() {
                 align-items: flex-start;
               `}
             >
-              <div className="icon"></div>
+              <div
+                css={css`
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 55px;
+                  height: 55px;
+                  border-radius: 12px;
+                  background-color: #fff;
+                `}
+              >
+                <Icon css={iconStyle} icon={faLightbulb} />
+              </div>
               <div
                 css={css`
                   width: 285px;
@@ -364,7 +389,19 @@ function Main() {
                 align-items: flex-start;
               `}
             >
-              <div className="icon"></div>
+              <div
+                css={css`
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 55px;
+                  height: 55px;
+                  border-radius: 12px;
+                  background-color: #fff;
+                `}
+              >
+                <Icon css={iconStyle} icon={faPuzzlePiece} />
+              </div>
               <div
                 css={css`
                   width: 285px;
@@ -385,7 +422,7 @@ function Main() {
                 align-items: flex-start;
               `}
             >
-              <div className="icon"></div>
+              <Icon css={iconStyle} icon={faFileUpload} />
               <div
                 css={css`
                   width: 285px;
@@ -472,9 +509,15 @@ function Main() {
                   box-shadow: 0px 1px 4px rgb(0 0 0 / 8%);
                 `}
               >
-                <i></i>
+                <Icon
+                  css={css`
+                    ${iconStyle}
+                    font-size: 26px;
+                  `}
+                  icon={faTree}
+                />
               </div>
-              <h3 css={heading3}>professional development</h3>
+              <h3 css={heading3}>bootcamp</h3>
               <p css={paragraph}>
                 Program intensif untuk belajar menjadi Full Stack Developer atau
                 Data Scientist.
@@ -486,7 +529,7 @@ function Main() {
                   font-weight: 500;
                   color: #383838;
                 `}
-                href=""
+                href="/"
               >
                 <button css={buttonJoin} type="button">
                   join bootcamp
@@ -536,12 +579,18 @@ function Main() {
                   box-shadow: 0px 1px 4px rgb(0 0 0 / 8%);
                 `}
               >
-                <i></i>
+                <Icon
+                  css={css`
+                    ${iconStyle}
+                    font-size: 26px;
+                  `}
+                  icon={faLayerGroup}
+                />
               </div>
               <h3 css={heading3}>professional development</h3>
               <p css={paragraph}>
-                Program intensif untuk belajar menjadi Full Stack Developer atau
-                Data Scientist.
+                Program paruh waktu untuk meningkatkan skill di bidang digital
+                teknologi.
               </p>
               <a
                 css={css`
@@ -550,7 +599,7 @@ function Main() {
                   font-weight: 500;
                   color: #383838;
                 `}
-                href=""
+                href="/"
               >
                 <button
                   css={css`
@@ -606,12 +655,18 @@ function Main() {
                   box-shadow: 0px 1px 4px rgb(0 0 0 / 8%);
                 `}
               >
-                <i></i>
+                <Icon
+                  css={css`
+                    ${iconStyle}
+                    font-size: 26px;
+                  `}
+                  icon={faUserTie}
+                />
               </div>
-              <h3 css={heading3}>professional development</h3>
+              <h3 css={heading3}>corporate program</h3>
               <p css={paragraph}>
-                Program intensif untuk belajar menjadi Full Stack Developer atau
-                Data Scientist.
+                Program pelatihan di bidang digital teknologi khusus untuk
+                perusahaan.
               </p>
               <a
                 css={css`
@@ -620,7 +675,7 @@ function Main() {
                   font-weight: 500;
                   color: #383838;
                 `}
-                href=""
+                href="/"
               >
                 <button
                   css={css`
@@ -702,7 +757,13 @@ function Main() {
               margin: 0 0 0 40px;
             `}
           >
-            <div css={diamondColumn}>
+            <div
+              css={css`
+                ${diamondColumn}
+                justify-content: flex-end;
+                margin: 0;
+              `}
+            >
               <div
                 css={css`
                   width: 105px;
@@ -829,7 +890,12 @@ function Main() {
               </div>
             </div>
 
-            <div css={diamondColumn}>
+            <div
+              css={css`
+                ${diamondColumn}
+                justify-content: flex-start;
+              `}
+            >
               <div
                 css={css`
                   width: 105px;
@@ -923,9 +989,9 @@ function Main() {
                   text-transform: none;
                   color: #383838;
                   margin: 15px 0 0 0;
-                  line-height: 1.3;
                   font-weight: 300;
                   font-size: 16px;
+                  line-height: 1.3;
                 `}
               >
                 Kami yang membantumu memilih, <br />
@@ -948,7 +1014,10 @@ function Main() {
                 <button
                   css={css`
                     ${buttonJoin}
-                    ${buttonContactUs}
+                    margin: 0 0 30px 0;
+                    width: 155px;
+                    background-color: #fff;
+                    color: #f16634;
                   `}
                   type="button"
                 >
